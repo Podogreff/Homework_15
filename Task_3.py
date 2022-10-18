@@ -42,7 +42,7 @@ class TVController:
         print(self.default_channel)
 
     def is_exist(self, name):
-        if isinstance(name, int) and 0 < name < 3 or name in CHANNELS:
+        if isinstance(name, int) and 0 < name < 3 or name in self.channels:
             print("YEAH!")
         else:
             print("NOPE!")
