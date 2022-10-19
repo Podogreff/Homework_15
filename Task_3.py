@@ -13,8 +13,11 @@ class TVController:
         return CHANNELS[-1]
 
     def turn_channel(self, number):
-        self.default_channel = CHANNELS[number-1]
-        return CHANNELS[number-1]
+        if 0 < number < 4:
+            self.default_channel = CHANNELS[number-1]
+            return CHANNELS[number-1]
+        else:
+            return "ERROR! Please enter the number between 1 - 3"
 
     def next_channel(self):
         if self.default_channel == CHANNELS[0]:
